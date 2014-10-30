@@ -1,0 +1,5 @@
+#Ignore Bootstrap css
+/site/css/*.min.css
+
+#Ignore node_modules
+/node_modules
