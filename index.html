@@ -8,7 +8,7 @@
 <body>
 
 <div id="books">
-	<form action="#" id="addbook">
+	<form action="#" id="addBook">
 		<div>
 			<label for="coverImage">Cover Image: </label><input id="coverImage" type="file" />
 			<label for="title">Title: </label><input id="title" type="text" />
@@ -19,6 +19,19 @@
 		</div>
 	</form>
 </div>
+
+<script id="bookTemplate" type="text/template">
+	
+<img src="<%= coverImage %>" alt="<%= title %>" />
+<ul>
+	<li><%= title %></li>
+	<li><%= author %></li>
+	<li><%= releaseDate %></li>
+	<li><%= keywords %></li>
+</ul>
+<button class="delete">Delete</button>
+
+</script>
 
 
 
