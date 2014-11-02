@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Library - tutorial app</title>
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="css/screen.css">
 </head>
 <body>
@@ -27,7 +29,7 @@
 	<li><%= title %></li>
 	<li><%= author %></li>
 	<li><%= $.format.date( new Date(releaseDate), 'MMMM yyyy' ) %></li>
-	<li><%= keywords %></li>
+	<li><% _.each( keywords, function( keyobj ) {%> <%= keyobj.keyword %><% } ); %></li>
 </ul>
 <button class="delete">Delete</button>
 
@@ -42,6 +44,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.13/backbone.localStorage-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 <script src="app/models/book.js"></script>
 <script src="app/collections/library.js"></script>
 <script src="app/views/book.js"></script>
